@@ -1,0 +1,30 @@
+/* Add appropriate styles for the facilities section */
+.facilities-section {
+	display: flex;
+	align-items: center;
+}
+
+.facilities-image {
+	flex: 1; /* Adjust the width of the image portion */
+	padding: 20px; /* Add padding to the image portion for spacing */
+}
+
+.facilities-image img {
+	max-width: 100%;
+	height: auto;
+}
+
+.facilities-details {
+	flex: 2; /* Adjust the width of the text details portion */
+	padding: 20px; /* Add padding to the text details portion for spacing */
+}
+
+.facilities-details h2 {
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+.facilities-details p {
+	font-size: 16px;
+	margin-bottom: 10px;
+}
