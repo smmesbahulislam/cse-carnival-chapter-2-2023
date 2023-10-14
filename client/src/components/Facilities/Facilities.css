@@ -2,6 +2,8 @@
 .facilities-section {
 	display: flex;
 	align-items: center;
+	background-color: #fff;
+	border-bottom: 2px solid #e6e6e6;
 }
 
 .facilities-image {
@@ -17,6 +19,8 @@
 .facilities-details {
 	flex: 2; /* Adjust the width of the text details portion */
 	padding: 20px; /* Add padding to the text details portion for spacing */
+	display: flex; /* Add display flex */
+	flex-direction: column;
 }
 
 .facilities-details h2 {
@@ -27,4 +31,14 @@
 .facilities-details p {
 	font-size: 16px;
 	margin-bottom: 10px;
+}
+
+.facility-card {
+	padding: 0 200px;
+}
+
+.odd {
+	display: flex;
+	justify-content: flex-end;
+	text-align: right;
 }
