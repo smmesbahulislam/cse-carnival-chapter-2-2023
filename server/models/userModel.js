@@ -17,12 +17,16 @@ const userSchema = new mongoose.Schema({
     },
     phone:{
         type: String,
-        required: true,
     },
     secretKey: {
         type: String,
         required: true,
     },
+    role: {
+        type: Number,
+        required: true,
+        enum: [1, 2, 3], // 1: user, 2: intern, 3: doctor
+    }
 },{timestamps: true});
 
 export default mongoose.model("users", userSchema);
