@@ -1,0 +1,114 @@
+.log-in-container{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: url('../../../public/images/log-in.jpg');
+    /* filter: blur(8px); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.log-in{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+}
+.log-in .left{
+    height: 100vh;
+    padding: 0px 120px 0px 120px;
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.log-in .left h1{
+    color: #efc04a;
+    font-family: cursive;
+    font-size: 55px;
+    line-height: 1.5;
+    letter-spacing: 3px;
+}
+.log-in .right{
+    flex:1;
+}
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 15px;
+    height: 100vh;
+  }
+  
+  .login-form {
+    /* width: 30vw; */
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .login-form h2 {
+    margin-bottom: 20px;
+  }
+  
+  .login-form label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .login-form .login-input{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .login-form input {
+    width: 100%;
+    font-size: 48px;
+    padding: 25px 0px 25px 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .login-form button {
+    width: fit-content;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .login-form button:hover {
+    background-color: #45a049;
+  }
+  .log-in .right .login-signup{
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .log-in .right .login-signup h3{
+    color: #efc04a;
+  }
+
+  .log-in .right .login-signup a{
+    text-decoration: none;
+    color: #fff;
+    font-style: italic;
+    font-weight: bolder ;
+  }
+  .login-form a{
+    text-decoration: none;
+    /* color: #000; */
+  }
+  
