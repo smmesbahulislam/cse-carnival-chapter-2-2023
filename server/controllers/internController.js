@@ -23,7 +23,7 @@ export const getAllInternController = async (req, res) => {
 
 export const updateInternInfoController = async (req, res) => {
     try {
-        const {name, email, phone, address, licenseNumber, education, specialization} = req.body;
+        const {name, email, phone, address, licenseNumber, education, specialization, supervisingDoctor} = req.body;
         const internId = req.params.id;
 
         const updatedIntern = await internModel.findOneAndUpdate(
@@ -34,7 +34,8 @@ export const updateInternInfoController = async (req, res) => {
                 address,
                 licenseNumber,
                 education,
-                specialization
+                specialization,
+                supervisingDoctor
             },
             {new: true}
         )

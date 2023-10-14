@@ -6,12 +6,16 @@ import AdminAppointmentTable from '../components/adminDashboard/AdminAppointment
 import AdminBlog from '../components/adminDashboard/AdminBlog';
 import AdminSidePanel from '../components/adminDashboard/AdminSidePanel';
 import Navbar from '../components/navbar/Navbar';
+import Nav from '../components/Nav/Nav'
 
 
 const AdminDashboard = () => {
   return (
     <>
-    <Navbar/>
+    <Nav/>
+    <div style={{
+        paddingTop: '80px'
+    }}>
     <Grid container spacing={2}>
         <Grid item xs={2}>
             <AdminSidePanel/>
@@ -57,6 +61,7 @@ const AdminDashboard = () => {
         </div>
     </Grid>
     </Grid>
+    </div>
     </>
   )
 }

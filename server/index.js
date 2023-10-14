@@ -13,6 +13,7 @@ import prescriptionRoutes from './routes/prescriptionRoutes.js';
 import internRoutes from './routes/internRoutes.js';
 import blogRoutes from './routes/blogRoutes.js';
 import reportRoutes from './routes/reportRoutes.js';
+import chatRoutes from './routes/chatRoutes.js';
 
 
 //configure env
@@ -39,6 +40,8 @@ app.use('/api/v1/intern',internRoutes)
 app.use('/api/v1/prescription',prescriptionRoutes);
 app.use('/api/v1/blog',blogRoutes);
 app.use('/api/v1/report',reportRoutes);
+app.use('/api/v1/chat',chatRoutes);
+
 app.use('/uploads/profiles', express.static('uploads/profiles'));
 app.use('/uploads/reports', express.static('uploads/reports'));
 

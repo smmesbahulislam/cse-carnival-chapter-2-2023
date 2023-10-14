@@ -1,4 +1,7 @@
 /* Blog Panel Starts */
+.blog-container{
+    padding-top: 85px;
+}
 .blog{
     margin-top: 15px;
 }
