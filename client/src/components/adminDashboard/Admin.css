@@ -1,0 +1,200 @@
+/* Admin Card starts */
+.admin-card{
+    height: 310px;
+    margin-top: 20px;
+    background-color: #fff;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 15px;
+    box-shadow: 1px 1px 9px 0px rgba(0,0,0,0.75);
+}
+.admin-card .card-info{
+   text-align: end;
+   padding-right: 20px;
+
+}
+
+.admin-card .card-info h1{
+    font-family: 'montserrat', sans-serif;
+}
+.admin-card .card-info h3{
+    margin-top: -5px;
+    font-family: 'palanquin', sans-serif;
+    font-size: 48px;
+}
+
+.admin-card .card-chart{
+    margin-top: -110px;
+}
+
+.admin-card .card-icon{
+    background-color: #6f42c1;
+    height: auto;
+    width: fit-content;
+    margin: 27px 0px 0px 27px;
+    padding: 10px;
+    border-radius: 13px;
+    box-shadow: 1px 1px 9px 0px rgba(0,0,0,0.75);
+}
+
+/* Admin Card Ends */
+
+/* Admin Table starts */
+
+.admin-table{
+    width: 100%;    
+    margin-bottom: 20px;
+}
+.admin-table table{
+    /* width: 420px; */
+    height: 200px ;
+    overflow-x: auto;
+    border-spacing: 0;
+    border-collapse: collapse;
+    box-shadow: 1px 1px 9px 0px rgba(0,0,0,0.75);
+}
+.table-size{
+    width: 420px;
+}
+.appoinment-table{
+    width: 100%;
+    padding: 35px;
+}
+
+.admin-table thead th{
+    border-top: #D5C9ED 2px solid;
+    border-bottom: #D5C9ED 2px solid;
+    font-size: 25px;
+}
+.admin-table th, td {
+    width: 25%;
+    padding: 18px;
+    text-align: left;
+    background-color: #fff;
+    font-size: 20px;
+    text-align: center;
+    border-bottom: 2px #f0f3fb solid;
+}
+.admin-table th {
+    background-color: #F2EDFC;
+}
+.admin-table img{
+    width: 53px;
+    height: 53px;
+    border-radius: 50%;
+}
+.admin-table th:nth-child(1),
+td:nth-child(1) {
+    width: 100px; /* Set the desired width */
+}
+.admin-table th:nth-child(2),
+td:nth-child(2) {
+    width: 350px; /* Set the desired width */
+}
+.admin-table th:nth-child(3),
+td:nth-child(3) {
+    width: 350px; /* Set the desired width */
+}
+.admin-table th:nth-child(4),
+td:nth-child(4) {
+    width: 200px; /* Set the desired width */
+}
+.admin-table th:nth-child(5),
+td:nth-child(5) {
+    width: 150px; /* Set the desired width */
+}
+.appointment-table{
+    margin-top: -60px;
+}
+.admin-appointment-table-btn{
+    background-color: #fff;
+    border: none;
+}
+.admin-table .status{
+    color: rgb(78, 209, 78);
+    font-weight: bolder;
+}
+
+/* Admin Table ends */
+/* Admin Blog Starts */
+.admin-blog{
+    padding: 50px; 
+    /* margin-left: 50px; */
+}
+.admin-blog .blog-container{
+    background-color: #fff;
+    padding: 25px;
+    border-bottom: 5px #f0f3fb solid;
+}
+.admin-blog img{
+    height: 53px;
+    width: 53px;
+    border-radius: 50%;
+}
+.admin-blog .blog-info{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 22px;
+}
+.admin-blog .blog-info .name{
+    font-size: 1.4em;
+    font-weight: 700;
+    font-family: 'montserrat', sans-serif;
+    color: crimson;
+}
+.admin-blog .blog-info .date{
+    color: rgb(47, 200, 47);
+    font-weight: 500;
+}
+.admin-blog .blog-info .blog-date-name{
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-blog p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2em;
+    color: rgb(121, 104, 104)
+}
+.admin-blog button{
+    background-color: #6f42c1;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.1em;
+}
+/* Admin Blog Ends */
+/* Admin Side Panel Starts */
+.admin-side-panel-info{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.admin-side-panel img{
+    height: 100px;
+    width: 100px;
+    border: 5px rgb(92, 92, 186) solid;
+    border-radius: 15px;
+
+}
+.admin-side-panel .side-panel-name{ 
+    margin-top: 13px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    font-size: 1.1em;
+
+}
+.admin-side-panel-options{
+
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f3fb;
+}
+/* Admin Side Panel Ends */
