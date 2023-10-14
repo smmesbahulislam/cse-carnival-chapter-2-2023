@@ -9,8 +9,10 @@ import {motion} from 'framer-motion';
 
 const Blog = () => {
   const [searchField, setSearchField] = useState('');
+  const [searchAuthor, setSearchAuthor] = useState('');
   const handleSearchChange = (event) => {
     setSearchField(event.target.value);
+    setSearchAuthor(event.target.value);
   };
   return (
     <>
@@ -27,7 +29,7 @@ const Blog = () => {
         </Grid>
         <Grid item xs={7}>
         <div>
-            <BlogPanel searchField={searchField}/>            
+            <BlogPanel searchField={searchField} searchAuthor={searchAuthor}/>            
         </div>
         </Grid>
         <Grid item xs={3}>

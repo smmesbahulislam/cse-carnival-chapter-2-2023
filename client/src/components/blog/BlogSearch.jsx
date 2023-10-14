@@ -1,6 +1,6 @@
 import React from 'react'
 
-const BlogSearch = () => {
+const BlogSearch = ({ onSearchChange }) => {
   return (
     <div className='blog-search'>
     <h3>Filter by Searching:</h3>
@@ -8,14 +8,14 @@ const BlogSearch = () => {
         className='search-box'
         type='search' 
         placeholder='Search by author'
-        // onChange={searchChange}
+        onChange={onSearchChange}
         style={{outline: 'none'}}
         />
         <input 
         className='search-box'
         type='search' 
         placeholder='Search'
-        // onChange={searchChange}
+        onChange={onSearchChange}
         style={{outline: 'none'}}
         />
     </div>

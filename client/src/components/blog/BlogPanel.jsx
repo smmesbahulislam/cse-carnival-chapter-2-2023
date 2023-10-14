@@ -5,7 +5,7 @@ import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 
 const blog_data=[
     {
-        title: 'Blog Title',
+        title: 'Corona',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
         img_author: 'images/user_image.jpg',
         date: '12/12/2021',
@@ -14,19 +14,28 @@ const blog_data=[
     },
     {
         title: 'Blog Title',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        description: 'Lorem samina dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
         img_author: 'images/user_image.jpg',
         date: '12/12/2021',
-        author: 'John Doe',
+        author: 'Nick Doe',
         tags: ['tag1', 'tag2', 'tag3']
     }
 ]
 
 
-const BlogPanel = () => {
+const BlogPanel = ({ searchField,searchAuthor }) => {
+
+    const newSearchField = blog_data.filter((data) => {
+        const lowerDescription=data.description.toLowerCase();
+        const lowerTitle=data.title.toLowerCase();
+        const lowerAuthor=data.author.toLowerCase();
+
+        return lowerDescription.includes(searchField.toLowerCase()) || lowerTitle.includes(searchField.toLowerCase()) || lowerAuthor.includes(searchAuthor.toLowerCase());
+      });
+
   return (
     <div className='blog'>
-        {blog_data.map((data) => (
+        {newSearchField.map((data) => (
             <div>
             <div className='blog-section'>
                 <div>
