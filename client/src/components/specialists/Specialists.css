@@ -1,0 +1,52 @@
+.doctor-card{
+    width: 300px;
+    margin: 20px;
+    border-radius: 4px;
+    padding-bottom: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);;
+}
+
+.doctor-card .doctor-gradient{
+    background-image: linear-gradient(#91baff,#205fff);
+    height: 125px;
+    border-radius: 4px 4px 0px 0px;
+}
+.doctor-card .intern-gradient{
+    background-image: linear-gradient(#91baff,#ff0aeb);
+    height: 125px;
+    border-radius: 4px 4px 0px 0px;
+}
+.doctor-card .doctor-profile {
+    text-align: center;
+    padding: 0px 20px;
+}
+
+.doctor-card .doctor-profile img{
+    height: 150px;
+    border-radius: 50%;
+    margin-top: -75px;
+    padding: 5px;
+    background: #fff;
+}
+.doctor-card .doctor-profile .profile-title{
+    font-size: 36px;
+    font-weight: 600;
+}
+.doctor-card .doctor-profile .profile-desription{
+    padding: 20px 40px;
+    font-size: 16px;
+}
+
+.doctor-card .doctor-profile .profile-button{
+    font-size: 16px;
+    background: #2b5dff;
+    margin: 10px 50px;
+    padding-top: 8px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
+.doctor-card .doctor-profile .profile-button a{
+    text-decoration: none;
+    color: #fff;
+}

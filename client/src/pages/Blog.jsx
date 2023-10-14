@@ -6,16 +6,21 @@ import BlogTags from '../components/blog/BlogTags'
 import BlogSearch from '../components/blog/BlogSearch'
 import Navbar from '../components/navbar/Navbar'
 import {motion} from 'framer-motion';
+import Nav from '../components/Nav/Nav'
 
 const Blog = () => {
   const [searchField, setSearchField] = useState('');
+  const [searchAuthor, setSearchAuthor] = useState('');
   const handleSearchChange = (event) => {
     setSearchField(event.target.value);
+    setSearchAuthor(event.target.value);
   };
   return (
     <>
-    <Navbar/>
+    {/* <Navbar/> */}
+    <Nav/>
     <motion.div
+        className='blog-container'
         initial={{ x: '-100vw' }}
         animate={{ x: '0' }}
         transition={{type: 'spring', stiffness: 120,duration: 1}}
@@ -27,7 +32,7 @@ const Blog = () => {
         </Grid>
         <Grid item xs={7}>
         <div>
-            <BlogPanel searchField={searchField}/>            
+            <BlogPanel searchField={searchField} searchAuthor={searchAuthor}/>            
         </div>
         </Grid>
         <Grid item xs={3}>
