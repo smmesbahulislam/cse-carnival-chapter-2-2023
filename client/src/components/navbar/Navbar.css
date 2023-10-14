@@ -1,0 +1,36 @@
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+.navbar .right{
+    display: flex;
+    flex-direction: row;
+}
+.navbar a{
+    text-decoration: none;
+    font-size: 1.4em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(10, 10, 144);
+
+}
+
+.navbar .navlink{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    list-style: none;
+}
+
+.navbar .nav-login{
+    margin-right: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar .left img{
+    height: 50px;
+}

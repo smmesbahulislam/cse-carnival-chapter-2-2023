@@ -4,8 +4,15 @@ import cors from 'cors';
 import colors from 'colors';
 import morgan from 'morgan';
 import connectDB from './config/db.js';
+import multer from 'multer';
 
 import authRoutes from './routes/authRoutes.js';
+import patientRoutes from './routes/patientRoutes.js';
+import doctorRoutes from './routes/doctorRoutes.js';
+import prescriptionRoutes from './routes/prescriptionRoutes.js';
+import internRoutes from './routes/internRoutes.js';
+import blogRoutes from './routes/blogRoutes.js';
+import reportRoutes from './routes/reportRoutes.js';
 
 
 //configure env
@@ -22,9 +29,18 @@ app.use(cors());
 app.use(express.json());
 app.use(morgan('dev'));
 
+
+
 //routes
 app.use('/api/v1/auth',authRoutes);
-
+app.use('/api/v1/patient',patientRoutes);
+app.use('/api/v1/doctor',doctorRoutes);
+app.use('/api/v1/intern',internRoutes)
+app.use('/api/v1/prescription',prescriptionRoutes);
+app.use('/api/v1/blog',blogRoutes);
+app.use('/api/v1/report',reportRoutes);
+app.use('/uploads/profiles', express.static('uploads/profiles'));
+app.use('/uploads/reports', express.static('uploads/reports'));
 
 //rest api
 app.get('/',(req,res) => {

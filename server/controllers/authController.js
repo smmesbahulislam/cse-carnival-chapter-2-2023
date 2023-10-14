@@ -1,10 +1,14 @@
 import userModel from "../models/userModel.js";
+import patientModel from "../models/patientModel.js";
+import doctorModel from "../models/doctorModel.js";
+import internModel from "../models/internModel.js";
+
 import { hashPassword, comparePassword } from "../helpers/authHelpers.js";
 import JWT from "jsonwebtoken";
 
 export const registerController = async( req, res) => {
     try {
-        const {name,email,password,phone,secretKey, role} = req.body;
+        const {name,email,password,secretKey, role} = req.body;
         //validation
         if(!name){
             return res.send({message:"Name is Required"});
@@ -33,7 +37,20 @@ export const registerController = async( req, res) => {
         //register user
         const hashedPassword = await hashPassword(password);
         //save user
-        const user = await new userModel({name,email,phone,password:hashedPassword,secretKey,role}).save();
+        const user = await new userModel({name,email,password:hashedPassword,secretKey,role}).save();
+        
+        //save into patient / intern / doctor databases
+        if(role === 1){
+            await new patientModel({name, email}).save();
+        }
+        else if(role === 2){
+            const {specialization, licenseNumber} = req.body;
+            await new internModel({name, email, specialization, licenseNumber}).save();
+        }
+        else if(role === 3){
+            const {specialization, licenseNumber} = req.body;
+            await new doctorModel({name, email, specialization, licenseNumber }).save();
+        }
         res.status(201).send({
             success:true,
             message: 'User Register Successfully',
@@ -84,7 +101,6 @@ export const loginController = async(req,res) =>{
                 _id: user._id,
                 name:user.name,
                 email:user.email,
-                phone:user.phone,
                 address:user.address,
                 role: user.role,
                 secretKey: user.secretKey,
