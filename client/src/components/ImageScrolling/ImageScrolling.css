@@ -1,0 +1,37 @@
+/* Set the container to be horizontally scrollable */
+.container {
+	overflow: hidden; /* Hide the scrollbar */
+	white-space: nowrap;
+}
+
+/* Set the images to be displayed inline and add transition for smooth animation */
+img {
+	display: inline-block;
+	transition: transform 1s linear;
+}
+
+.scroll-image {
+	height: 1vh;
+	width: 100%;
+	object-fit: cover;
+	display: inline-block;
+}
+
+/* Set the animation for the scrolling */
+@keyframes scroll {
+	0% {
+		transform: translateX(100%); /* Initial position is fully to the right */
+	}
+	100% {
+		transform: translateX(-100%); /* End position is fully to the left */
+	}
+}
+
+/* Apply the animation to the container */
+.container {
+	animation: scroll 10s linear infinite;
+}
+
+.default-nav {
+	margin: 0 30px;
+}
