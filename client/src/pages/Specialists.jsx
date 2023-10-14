@@ -2,6 +2,7 @@ import React from 'react'
 import DoctorCard from '../components/specialists/DoctorCard'
 import InternCard from '../components/specialists/InternCard'
 import Nav from '../components/Nav/Nav'
+import {motion} from 'framer-motion';
 const doctor_data=[
     {
         name: 'Dr. Samina',
@@ -102,7 +103,13 @@ const Specialists = () => {
         }}
     >Meet Our Experts</h1>
     <h2>Doctor's Lists: </h2>
-    <div 
+    <motion.div
+        initial={{ y: '+100vh' }}
+        animate={{ y: '0' }} 
+        transtion={{
+            type: 'spring',
+            duration: 1
+        }}
         style={{
             display: 'flex',
             flexWrap: 'wrap',
@@ -118,7 +125,7 @@ const Specialists = () => {
                 email={doctor.email}
             />
         ))}
-    </div>
+    </motion.div>
     
     <h2>Intern's List:</h2>
     <div 
