@@ -10,6 +10,7 @@ import authRoutes from './routes/authRoutes.js';
 import patientRoutes from './routes/patientRoutes.js';
 import doctorRoutes from './routes/doctorRoutes.js';
 import prescriptionRoutes from './routes/prescriptionRoutes.js';
+import internRoutes from './routes/internRoutes.js';
 
 
 //configure env
@@ -32,6 +33,7 @@ app.use(morgan('dev'));
 app.use('/api/v1/auth',authRoutes);
 app.use('/api/v1/patient',patientRoutes);
 app.use('/api/v1/doctor',doctorRoutes);
+app.use('/api/v1/intern',internRoutes)
 app.use('/api/v1/prescription',prescriptionRoutes);
 app.use('/uploads/profiles', express.static('uploads/profiles'));
 
