@@ -1,6 +1,7 @@
 import userModel from "../models/userModel.js";
 import patientModel from "../models/patientModel.js";
 import doctorModel from "../models/doctorModel.js";
+import internModel from "../models/internModel.js";
 
 import { hashPassword, comparePassword } from "../helpers/authHelpers.js";
 import JWT from "jsonwebtoken";
@@ -43,7 +44,8 @@ export const registerController = async( req, res) => {
             await new patientModel({name, email}).save();
         }
         else if(role === 2){
-
+            const {specialization, licenseNumber} = req.body;
+            await new internModel({name, email, specialization, licenseNumber}).save();
         }
         else if(role === 3){
             const {specialization, licenseNumber} = req.body;
