@@ -11,6 +11,7 @@ import patientRoutes from './routes/patientRoutes.js';
 import doctorRoutes from './routes/doctorRoutes.js';
 import prescriptionRoutes from './routes/prescriptionRoutes.js';
 import internRoutes from './routes/internRoutes.js';
+import blogRoutes from './routes/blogRoutes.js';
 
 
 //configure env
@@ -35,6 +36,7 @@ app.use('/api/v1/patient',patientRoutes);
 app.use('/api/v1/doctor',doctorRoutes);
 app.use('/api/v1/intern',internRoutes)
 app.use('/api/v1/prescription',prescriptionRoutes);
+app.use('/api/v1/blog',blogRoutes);
 app.use('/uploads/profiles', express.static('uploads/profiles'));
 
 //rest api
