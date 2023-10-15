@@ -1,9 +1,9 @@
+import DoctorCard from '../components/specialists/DoctorCard'
+import InternCard from '../components/specialists/InternCard'
+import Nav from '../components/Nav/Nav'
+import {motion} from 'framer-motion';
 import axios from "axios";
-import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
-import Nav from "../components/Nav/Nav";
-import DoctorCard from "../components/specialists/DoctorCard";
-import InternCard from "../components/specialists/InternCard";
 // const doctor_data=[
 //     {
 //         name: 'Dr. Samina',
