@@ -8,6 +8,7 @@ import ChatPage from "./pages/ChatPage";
 import Login from "./pages/LogIn";
 // import SignUp from "./pages/SignUp";
 import Specialists from "./pages/Specialists";
+import Appointment from "./pages/Appointment";
 
 function App() {
 	return (
@@ -20,6 +21,7 @@ function App() {
 				<Route path="login" element={<Login />} />
 				<Route path="signup" element={<Signup />} />
 				<Route path="Specialists" element={<Specialists />} />
+        <Route path="appointment" element={<Appointment/>} />
 			</Routes>
 		</Router>
 	);
