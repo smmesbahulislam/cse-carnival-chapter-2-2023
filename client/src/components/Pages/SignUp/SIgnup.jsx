@@ -1,7 +1,8 @@
+import axios from "axios";
 import React, { Component } from "react";
 import Footer from "../../Footer/Footer";
 import Nav from "../../Nav/Nav";
-import "./Signup.css"; // Import your CSS file
+import "./Signup.css";
 
 class Signup extends Component {
 	constructor(props) {
@@ -17,6 +18,8 @@ class Signup extends Component {
 		};
 	}
 
+	// navigate = useNavigate();
+
 	handleRoleChange = (event) => {
 		const selectedRole = event.target.value;
 		this.setState({
@@ -29,6 +32,63 @@ class Signup extends Component {
 	handleChange = (event) => {
 		const { name, value } = event.target;
 		this.setState({ [name]: value });
+	};
+
+	handleSignUpClick = async () => {
+		const {
+			role,
+			name,
+			email,
+			password,
+			secretKey,
+			specialization,
+			licenseNumber,
+		} = this.state;
+
+		if (role === "patient") {
+			const patientInfo = {
+				name,
+				email,
+				password,
+				secretKey,
+				role: 1,
+			};
+
+			const response = await axios.post(
+				`${process.env.REACT_APP_API}/api/v1/auth/register`,
+				patientInfo
+			);
+		} else if (role === "intern") {
+			const info = {
+				name,
+				email,
+				password,
+				secretKey,
+				role: 2,
+				specialization,
+				licenseNumber,
+			};
+
+			const response = await axios.post(
+				`${process.env.REACT_APP_API}/api/v1/auth/register`,
+				info
+			);
+		} else {
+			const info = {
+				name,
+				email,
+				password,
+				secretKey,
+				role: 3,
+				specialization,
+				licenseNumber,
+			};
+
+			const response = await axios.post(
+				`${process.env.REACT_APP_API}/api/v1/auth/register`,
+				info
+			);
+		}
 	};
 
 	render() {
@@ -131,7 +191,9 @@ class Signup extends Component {
 									className="box"
 								/>
 							</div>
-							<button className="btn box">Sign Up</button>
+							<button className="btn box" onClick={this.handleSignUpClick}>
+								Sign Up
+							</button>
 						</form>
 					</div>
 				</div>

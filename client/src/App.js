@@ -6,7 +6,7 @@ import AdminDashboard from "./pages/AdminDashboard";
 import Blog from "./pages/Blog";
 import ChatPage from "./pages/ChatPage";
 import Login from "./pages/LogIn";
-import SignUp from "./pages/SignUp";
+// import SignUp from "./pages/SignUp";
 import Specialists from "./pages/Specialists";
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
 				<Route path="blog" element={<Blog />} />
 				<Route path="/chat" element={<ChatPage />} />
 				<Route path="login" element={<Login />} />
-				<Route path="signup" element={<SignUp />} />
+				<Route path="signup" element={<Signup />} />
 				<Route path="Specialists" element={<Specialists />} />
 			</Routes>
 		</Router>
